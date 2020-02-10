@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item':true, 
+                'list-group-item-success':blogAime>blogAimepas,
+                'list-group-item-danger':blogAime<blogAimepas}">
+    <h2>{{blogTitre}} -- {{created_at | date:'medium' }}</h2>
+    <p>{{blogArticle}}</p>
+    <button class="btn btn-sm btn-success"
+          (click)="onupAime()">On Aime - {{blogAime}}</button>
+    <button class="btn btn-sm btn-danger"
+          (click)="onupAimePas()">On n'aime pas - {{blogAimepas}}</button>
+    <button class="btn btn-sm btn-danger droite"
+          (click)="onDeleteblog()">Supprimer</button>
+</li>

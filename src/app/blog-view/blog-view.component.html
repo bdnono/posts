@@ -1,0 +1,14 @@
+<button class="btn " (click)="onNewBlog()">Nouveau Blog</button>
+<button class="btn btn-primary droite" (click)="onSave()">Enregistrer les blogs</button>
+<button class="btn btn-primary droite" (click)="onFetch()">Récupérer les blogs</button>
+<div class="col-xs-12">
+    <h2>Blogs</h2>
+    <app-blog
+       *ngFor="let blog of blogs;let i=index"[blogTitre]="blog.titre"
+       [blogArticle]="blog.article" [id]="i"[blogAime]="blog.aime" [blogAimepas]="blog.aimepas"
+       [created_at]="blog.created_at">
+     </app-blog>
+    </div>
+
+ 
+  
